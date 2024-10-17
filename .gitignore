@@ -1,0 +1,5 @@
+.eventif
+*.sqlite3
+pycache
+.env
+secret_gen.py
