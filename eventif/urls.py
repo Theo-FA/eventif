@@ -22,5 +22,5 @@ from subscriptions.views import subscribe
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home),
-    path("inscricao/", subscribe),
+    path("inscricao/", subscribe)
 ]
