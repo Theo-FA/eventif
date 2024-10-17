@@ -3,3 +3,4 @@
 __pycache__
 .env
 staticfiles
+secret_gen.py
