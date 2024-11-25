@@ -4,7 +4,7 @@ from django.core import mail
 
 class SubscribePostValid(TestCase):
     def setUp(self):
-        data = dict(name="Theo Ferraz", cpf='12345678901',
+        data = dict(name="Théo Ferraz", cpf='12345678901',
                     email='theoferrazalmeida@hotmail.com', phone='53-12345-6789')
         self.client.post('/inscricao/', data)
         self.email = mail.outbox[0]
@@ -23,7 +23,7 @@ class SubscribePostValid(TestCase):
 
     def test_subscription_email_body(self):
         contents = (
-            'Theo Ferraz',
+            'Théo Ferraz',
             '12345678901',
             'theoferrazalmeida@hotmail.com',
             '53-12345-6789'

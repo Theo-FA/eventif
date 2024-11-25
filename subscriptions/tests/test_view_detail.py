@@ -5,7 +5,7 @@ from subscriptions.models import Subscription
 class SubscriptionDetailGet(TestCase):
     def setUp(self):
         obj = Subscription.objects.create(
-            name='Theo Ferraz',
+            name='Théo Ferraz',
             cpf='12345678901',
             email='theoferrazalmeida@hotmail.com',
             phone='53-91234-5678'
@@ -24,7 +24,7 @@ class SubscriptionDetailGet(TestCase):
         self.assertIsInstance(subscription, Subscription)
 
     def test_html(self):
-        contents = ('Theo Ferraz', '12345678901',
+        contents = ('Théo Ferraz', '12345678901',
                     'theoferrazalmeida@hotmail.com', '53-91234-5678')
         with self.subTest():
             for expected in contents:
