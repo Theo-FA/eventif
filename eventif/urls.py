@@ -23,6 +23,6 @@ urlpatterns = [
     path('', home, name='home'),
     path('inscricao/', include('subscriptions.urls')),
     path('contact/', contact),
-    path('palestrantes/<slug:slug>/', speaker_detail),
+    path('palestrantes/<slug:slug>/', speaker_detail, name='speaker_detail'),
     path('admin/', admin.site.urls),
 ]
