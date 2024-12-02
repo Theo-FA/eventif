@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 
 def home(request):
@@ -7,3 +8,6 @@ def home(request):
         {'name': 'Alan Turing', 'photo': 'https://abre.ai/turing-pic'}
     ]
     return render(request, 'index.html', {'speakers': speakers})
+
+def speaker_detail(request):
+    return HttpResponse()
