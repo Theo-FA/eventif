@@ -20,9 +20,11 @@ def create(request):
     if not form.is_valid():
         return render(request, 'contact/contact_form.html', {'form': form})
 
+    contact = Contact.objects.create(**form.cleaned_data)
+    
     _send_mail(
         'contact/contact_email.txt',
-        form.cleaned_data,
+        {'contact': contact},
         'Novo contato.',
         settings.DEFAULT_FROM_EMAIL,
         form.cleaned_data['email'])
