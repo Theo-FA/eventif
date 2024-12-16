@@ -25,7 +25,7 @@ class Contact(models.Model):
         return self.name
 
 @receiver(post_save, sender=Contact)
-def send_new_officer_notification_email(sender, instance, **kwargs):
+def send_response(sender, instance, **kwargs):
 
     if instance.response:
             data = {"name": instance.name, "phone": instance.phone if instance.phone else 'não informado', "email": instance.email, "message": instance.message, "response": instance.response}
