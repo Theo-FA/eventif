@@ -27,7 +27,7 @@ class ContactModelTest(TestCase):
         self.assertEqual('Théo Ferraz', str(self.obj))
 
     def test_subscription_email_subject(self):
-        expect = 'Resposta do seu contato'
+        expect = 'Resposta do contato'
         self.assertEqual(expect, self.email.subject)
 
     def test_subscription_email_from(self):
